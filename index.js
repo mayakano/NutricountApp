@@ -1,3 +1,7 @@
+import React from  'react';
+
+import { key, appID } from "./config.js";
+
 const express = require('express');
 const axios = require('axios');
 const app = express();
