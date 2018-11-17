@@ -10,10 +10,10 @@ class App extends Component {
 
   constructor(){
     super();
-    this.state = { 
+    this.state = {
         nutri: {}
     }
-    
+
 }
 
   async componentDidMount(){
@@ -23,7 +23,7 @@ class App extends Component {
           nutri: data
       });
   }
-  
+
   render() {
     return (
       <div className="App">
