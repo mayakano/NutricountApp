@@ -68,6 +68,25 @@ createItem(name,calories,serving,unit){
      </div>
    );
  }
+
+            let it = this.createItem(food, data.nf_calories, data.nf_serving_size_qty, data.nf_serving_size_unit);
+            this.setState({nutri: [it],
+                          TotalCalories: totalCount})
+      }
+    })
+  }
+
+
+
+createItem(name,calories,serving,unit){
+  return{
+    name:name,
+    calories:calories,
+    serving:serving,
+    unit:unit
+  }
 }
+
+
 
 export default App;
