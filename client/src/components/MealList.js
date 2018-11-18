@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
+
 class MealList extends Component {
     render() {
         return (
 
-            <div>
-                <p>  {this.props.foodName} : {this.props.calories}</p>
-            </div>
+            <ul id = "meal-list">
+                <li>  {this.props.foodName} : {this.props.calories} ({this.props.serving} {this.props.unit})</li>
+
+            </ul>
         )
     }
 }
