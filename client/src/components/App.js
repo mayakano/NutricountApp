@@ -19,23 +19,22 @@ class App extends Component {
   handleSubmit = (e) => {
    e.preventDefault();
    const food = e.target.elements.name.value;
-   axios.get('https://api.nutritionix.com/v1_1/search/'+food+'?results=0%3A1&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=13b53dd7&a')
+   axios.get('https://api.nutritionix.com/v1_1/search/'+food+'?results=0%3A1&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=13b53dd7&appKey=688b26041f770fad8240a50fb6bc3080')
    .then((res) => {
      let id = res.data.hits[0]._id;
-     axios('https://api.nutritionix.com/v1_1/item?id='+id+'&')
+     axios('https://api.nutritionix.com/v1_1/item?id='+id+'&appId=13b53dd7&appKey=688b26041f770fad8240a50fb6bc3080')
      .then((res) => {
       let data = res.data;
       let totalCount = data.nf_calories;
       if(this.state.nutri.length>0){
-        let obj = {name: food,
-                   calories: data.nf_calories}
-        let addedArray = this.state.nutri.concat(obj);
+        let it = this.createItem(food, data.nf_calories, data.nf_serving_size_qty, data.nf_serving_size_unit);
+        let addedArray = this.state.nutri.concat(it);
         totalCount= totalCount+data.nf_calories;
       this.setState({nutri: addedArray,
                     TotalCalories: totalCount})
       }else{
-        this.setState({nutri: [{name: food,
-                       calories: data.nf_calories}],
+        let it = this.createItem(food, data.nf_calories, data.nf_serving_size_qty, data.nf_serving_size_unit);
+        this.setState({nutri: [it],
                       TotalCalories: totalCount})
       }
                      
@@ -43,6 +42,18 @@ class App extends Component {
      
    })
  }
+
+
+
+createItem(name,calories,serving,unit){
+  return{
+    name:name,
+    calories:calories,
+    serving:serving,
+    unit:unit
+  }
+}
+ 
 
 
   render() {
