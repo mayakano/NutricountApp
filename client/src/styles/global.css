@@ -1,0 +1,20 @@
+body {
+  background-image: url("https://softdental.net/wp-content/uploads/2018/07/nutrition-health.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  display: flex;
+  color: white;
+  font-family: georgia;
+  font-size: 30px;
+  justify-content: center;
+}
+
+#directions {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font: italic bold 18px/20px Georgia, serif;
+}
