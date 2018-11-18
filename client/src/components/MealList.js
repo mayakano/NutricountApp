@@ -5,12 +5,6 @@ class MealList extends Component {
         return (
 
             <div>
-                {
-                     this.props.calories.map( (day, i) => {
-                        
-                       return  <p>  {this.props.foodName} : {day}</p>
-                      })
-                }
                 <p>  {this.props.foodName} : {this.props.calories}</p>
             </div>
         )
