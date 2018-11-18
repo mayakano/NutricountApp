@@ -13,8 +13,7 @@ class App extends Component {
         nutri: [],
         TotalCalories:""
     }
-    //this.getFood = this.getFood.bind(this);
-}
+
 
   handleSubmit = (e) => {
    e.preventDefault();
