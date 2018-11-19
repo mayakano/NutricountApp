@@ -1,37 +1,45 @@
 import React, { Component } from 'react';
-import Input from './Input';
-import MealList from './MealList';
-import TotalCalories from './TotalCalories';
-import MoreInfo from './MoreInfo';
-import axios from 'axios';
-import { key, appID } from '../../../config';
+import About from './About';
+import Home from './Home';
+import WhyUs from './WhyUs';
+import Contact from './Contact';
+import '../styles/style.css';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
 
 class App extends Component {
 
-  constructor(){
-    super();
-    this.state = { 
-        nutri: {}
-    }
-    
-}
 
-  async componentDidMount(){
-      let {data} = await axios('https://api.nutritionix.com/v1_1/search/taco?results=0%3A1&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=');
-    
-      this.setState({
-          nutri: data
-      });
-  }
-  
-  render() {
-    return (
-      <div className="App">
-      HELLO WORLD
-      <Input />
+ render() {
+   return (
+     <BrowserRouter className="App">
+
+       <div>
+
+          <img width="450px" class="weblogo" src="NutriCount-logo.png" />
+            <nav id="navigation">
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/whyus">Why NutriCount?</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+
+            </ul>
+            </nav>
+
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/whyus" component={WhyUs} />
+          <Route path="/Contact" component={Contact} />
+
+
+
+
       </div>
-    );
-  }
+
+     </BrowserRouter>
+   );
+ }
 }
 
 export default App;

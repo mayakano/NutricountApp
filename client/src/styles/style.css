@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+}
+input#searcher, input {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+#meal-list {
+  margin-left: auto;
+  margin-right: auto;
+  color: green;
+  margin-top: 10px;
+  list-style: none;
+      font-weight: 700;
+}
+
+
+
+
+.box{
+  margin: 20px auto;
+      margin-bottom: 80px;
+  width: 300px;
+  height: 50px;
+}
+
+.container-1{
+  width: 300px;
+  margin-top: 40px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-1 input#searcher{
+  width: 300px;
+  height: 50px;
+  background: #fb861e;
+  border: none;
+  font-size: 20px;
+  float: left;
+  margin-bottom: 10px;
+  color: #63717f;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-transition: background .55s ease;
+-moz-transition: background .55s ease;
+-ms-transition: background .55s ease;
+-o-transition: background .55s ease;
+transition: background .55s ease;
+}
+
+.container-1 input#searcher::-webkit-input-placeholder {
+   color: white;
+   text-align: center;
+}
+
+.container-1 input#searcher:-moz-placeholder { /* Firefox 18- */
+   color: white;
+   text-align: center;
+}
+
+.container-1 input#searcher::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+   text-align: center;
+
+}
+
+.container-1 input#searcher:-ms-input-placeholder {
+   color: white;
+   text-align: center;
+}
+
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.container-1 input#searcher:hover, .container-1 input#searcher:focus, .container-1 input#searcher:active{
+    outline:none;
+    background: #fb861ec7;
+  }
+
+input {
+      -webkit-appearance: button;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      width: 170px;
+      height: 35px;
+    }
+
+    #totalcal {
+      padding-top: 20px;
+    }
+
+    .mainmenu {
+    display: inline-block;
+}
+
+
+
+ul {
+  list-style: none;
+  padding-right: 40px;
+}
+
+.mainmenu > ul > li {
+    display: inline-block!important;
+    position: relative;
+}
+
+  .mainmenu > ul > li > a {
+    font-family: 'Nunito', sans-serif;
+    padding: 0px 18px;
+    color: #333;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 164px;
+    display: inline-block;
+    position: relative;
+}
+
+#navigation {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 50px;
+}
+#navigation ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+#navigation ul li a {
+  height: inherit;
+  padding: 0 25px;
+  display: inline-block;
+  transition: all 150ms ease;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+#navigation ul li a:hover {
+  background: #659c35;
+  color: #fff;
+  text-decoration: none;
+}
+#navigation.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+a {
+  color: #88c057;
+    text-decoration: none;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.weblogo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

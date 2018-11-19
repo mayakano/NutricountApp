@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
-class TotalCalories extends Component {
+
+
+class MoreInfo extends Component {
     render() {
         return (
-            <div>THIS IS THE TOTALCALORIES COMPONENT</div>
+            <div>THIS IS THE MOREINFO COMPONENT</div>
+
         )
     }
+
 }
 
-export default TotalCalories
+
+export default MoreInfo;

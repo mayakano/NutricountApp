@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 
-class MoreInfo extends Component {
+class TotalCalories extends Component {
+
     render() {
         return (
-            <div>THIS IS THE MOREINFO COMPONENT</div>
+            <div id="totalcal">
+                <p>The total calories from this meal is: <b>{this.props.calor}</b> </p>
+            </div>
         )
     }
 
 }
 
-export default MoreInfo
+//CALORIES WILL BE IN AN ARRAY.
+//SPLIT THAT ARRAY AND THEN WRITE A SUM FUNCTION
+export default TotalCalories;
