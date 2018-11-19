@@ -6,9 +6,10 @@ class MealList extends Component {
         return (
 
             <ul id = "meal-list">
-                <li>  {this.props.foodName} : {this.props.calories} ({this.props.serving} {this.props.unit})</li>
+                <li id="mealitem">  {this.props.foodName} : {this.props.calories} ({this.props.serving} {this.props.unit})</li>
 
             </ul>
+
         )
     }
 }
