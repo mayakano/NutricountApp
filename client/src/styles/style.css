@@ -848,3 +848,11 @@ body {
   color: #fb861e;
   font-weight: 600;
 }
+
+.plus-sign:hover {
+  cursor: pointer;
+}
+
+#plus:hover {
+  cursor: pointer;
+}
