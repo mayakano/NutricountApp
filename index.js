@@ -1,8 +1,14 @@
 
 const express = require('express');
 const axios = require('axios');
-const { keys }  = require('./config.js');
-const { appID } = require('./config.js')
+let keys, appID
+if(process.env.PORT) {
+  keys = process.env.KEYS;
+  appID = process.env.APP_ID;
+} else {
+  keys  = require('./config.js').keys;
+  appID = require('./config.js').appID
+}
 const app = express();
 
 
