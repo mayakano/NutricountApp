@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Input from './Input';
 import MealList from './MealList';
 import TotalCalories from './TotalCalories';
+import MoreInfo from './MoreInfo';
 import axios from 'axios';
 import '../styles/style.css';
 
@@ -12,7 +13,10 @@ export default class Home extends Component {
    super();
    this.state = {
        nutri: [],
-       TotalCalories:""
+       TotalCalories:"",
+       message: ["According to the U.S. Department of Health and Human Services 2010 Dietary Guidelines, the typical woman needs about 2,000 calories per day, and the typical man 2,500 calories per day.",
+                 "2","3"],
+       randomMessage: ""
    }
    this.editCalories = this.editCalories.bind(this);
    // this.getFood = this.getFood.bind(this);
@@ -31,13 +35,15 @@ editCalories(selectedCal){
      if(this.state.nutri.length>0){
            let it = this.createItem(food, data.nf_calories, data.nf_serving_size_qty, data.nf_serving_size_unit);
            let addedArray = this.state.nutri.concat(it);
-           totalCount= totalCount+data.nf_calories;
+           totalCount= this.state.TotalCalories+totalCount;
            this.setState({nutri: addedArray,
-                         TotalCalories: totalCount})
+                         TotalCalories: totalCount,
+                         randomMessage: this.state.message[Math.floor(Math.random() * this.state.message.length)]})
      } else {
            let it = this.createItem(food, data.nf_calories, data.nf_serving_size_qty, data.nf_serving_size_unit);
            this.setState({nutri: [it],
-                         TotalCalories: totalCount})
+                         TotalCalories: totalCount,
+                         randomMessage: this.state.message[Math.floor(Math.random() * this.state.message.length)]})
      }
    })
  }
@@ -69,8 +75,13 @@ createItem(name,calories,serving,unit){
                                    editCalories = {this.editCalories}/>
              })
                }
-       <TotalCalories calor={this.state.TotalCalories} />
+   
+       <div id="hidden">
+          <TotalCalories calor={this.state.TotalCalories} />
+          <MoreInfo message={this.state.randomMessage}/>
+       </div>
        </div>
    );
  }
 }
+

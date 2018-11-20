@@ -16,7 +16,7 @@ class App extends Component {
 
        <div>
 
-          <img width="450px" class="weblogo" src="NutriCount-logo.png" />
+         <a href="/"><img width="450px" class="weblogo" src="NutriCount-logo.png" /></a>
             <nav id="navigation">
             <ul>
               <li><Link to="/">Home</Link></li>
