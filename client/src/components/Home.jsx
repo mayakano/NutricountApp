@@ -15,7 +15,8 @@ export default class Home extends Component {
        nutri: [],
        TotalCalories:"",
        message: ["According to the U.S. Department of Health and Human Services 2010 Dietary Guidelines, the typical woman needs about 2,000 calories per day, and the typical man 2,500 calories per day.",
-                 "2","3"],
+       "The amount of calories needed depends on age, gender, height, weight, goals, body composition and metabolic rate.","Each pound of body fat stores roughly 3500 calories.", "If you would like to lose one pound per week, you would need to create a calorie shortage of 3500 calories per week or 500 calories per day",
+       "Soft drinks are empty-calorie foods.  They supply the body with calories but very few nutrients.", "Nutrient-dense foods include unprocessed food items, fruits, vegetables, etc."],
        randomMessage: ""
    }
    this.editCalories = this.editCalories.bind(this);

@@ -5,7 +5,7 @@ class TotalCalories extends Component {
     render() {
         return (
             <div id="totalcal">
-                <p>The total calories from this meal is: <b>{this.props.calor}</b> </p>
+                <p>Total Calories: <b>{this.props.calor}</b> </p>
             </div>
         )
     }

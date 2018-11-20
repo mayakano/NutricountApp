@@ -1,14 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../styles/style.css';
+
 
 class MoreInfo extends Component {
 
-    render() {
-        return (
-            <p id="message">Tip: {this.props.message}</p>
-
-        )
-    }
+  render() {
+      return (
+        <div id="message" class="tooltip tooltip-bottom tooltip-custom">
+          <p class="tooltip-inner" >Nutrition Tip : {this.props.message}</p>
+        </div>
+      )
+  }
 
 }
+
+
 
 export default MoreInfo;
