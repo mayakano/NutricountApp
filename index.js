@@ -17,10 +17,10 @@ app.get('/food/:input', async (req, res) => {
   let id = item.data.hits[0]._id;
   let {data} = await axios(`https://api.nutritionix.com/v1_1/item?id=${id}&appId=${appID}&appKey=${keys}`);
   res.send(data)
+})
 
 
-
-let PORT = 5000;
+let PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log("Listening on port " + PORT));
 
